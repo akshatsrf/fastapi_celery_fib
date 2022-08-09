@@ -12,4 +12,7 @@ async def send_number(number: int):
 async def get_fib(id):
     result = AsyncResult(id, app=app1)
     return result.get()
-    
+
+@app.get('/without_celery/{number}')
+async def send_number_without_celery(number: int):
+    return fib(number)
