@@ -2,7 +2,7 @@ from celery import Celery
 
 app1 = Celery('tasks',
              broker='amqp://uwvixavr:MtPVnhDmZKcIWbfyAGDzCU8SBieiSAWD@turkey.rmq.cloudamqp.com/uwvixavr',
-             backend='db+mysql://sql6511496:ckPSt9eVyc@sql6.freesqldatabase.com:3306/sql6511496')
+             backend='db+mysql://sql6513307:rC6MLbdySn@sql6.freesqldatabase.com:3306/sql6513307')
 
 @app1.task
 def fib(n: int):
